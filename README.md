@@ -18,18 +18,18 @@ Tracking my contributions to open source projects, primarily in the Apache Fluss
 
 - **Projects:** Apache Fluss, Fluss Rust Client
 - **Total PRs:** 17
-- **Merged PRs:** 10
-- **Open PRs:** 7
+- **Merged PRs:** 11
+- **Open PRs:** 6
 
 > 📦 Credited contributor in the official 
-> [Apache Fluss v0.9.0-incubating release](https://github.com/apache/fluss/releases/tag/v0.9.0-incubating)
+> [Apache Fluss v0.9.0-incubating release](https://github.com/apache/fluss/releases/tag/v0.9.0-incubating) and [Fluss clients v0.1.0 release](https://fluss.apache.org/blog/fluss_rust_client_release/)
 ---
 
 ## About Me
 
 I am **Prajwal Banakar**, a 4th-year **Information Science & Engineering (B.E.)** student with a strong interest in **distributed systems, real-time data infrastructure, and backend engineering**.
 
-I am a credited contributor to **Apache Fluss (Incubating)** with 5 merged PRs across the **v0.9.0 release**. My Contributions to the Fluss core project including documentation tooling, testing, client improvements, and developer experience enhancements.
+I am a credited contributor to **Apache Fluss (Incubating)**, with contributions included in the **v0.9.0 release** and the **multi-language Fluss clients v0.1.0 release**. My work spans documentation tooling, testing, client development, and developer experience improvements.
 
 I enjoy working on systems that operate at scale and exploring technologies related to **stream processing, storage engines, and data infrastructure**.
 
@@ -104,7 +104,7 @@ Contributions focused on enabling bitmap-based aggregation in Flink to support r
 
 | PR | Status | Area | Description |
 |----|--------|------|-------------|
-| [#1](https://github.com/flink-extended/flink-roaringbitmap/pull/1) | Open | Flink / UDF / Data Processing | Implemented bitmap UDFs (`Rb_CARDINALITY`, `Rb_OR_AGG`) along with serialization utilities and tests to unblock the Real-Time User Profile quickstart by enabling bitmap-based aggregation in Flink |
+| [#1](https://github.com/flink-extended/flink-roaringbitmap/pull/1) | Merged | Flink / UDF / Data Processing | Implemented bitmap UDFs (`Rb_CARDINALITY`, `Rb_OR_AGG`) along with serialization utilities and tests to unblock the Real-Time User Profile quickstart by enabling bitmap-based aggregation in Flink |
 
 
 ---
@@ -112,7 +112,8 @@ Contributions focused on enabling bitmap-based aggregation in Flink to support r
 ## Active Proposal
 
 ### Native BITMAP Integration & Stateless Pushdown Aggregation
-- Submitted formal [DISCUSS](https://lists.apache.org/thread/z9dwyg81cs3bt7yssb4n3vg17o767r5s) thread to dev@fluss.apache.org (March 2026)
-- Full proposal: [Google Doc](https://docs.google.com/document/d/1sDhfkmo-w-UTvo2n3rsY1lytSSryswfkI83cSdka8s0/edit?usp=sharing)
-- Scope: End-to-end BITMAP type support in Fluss — BitmapType, UDF suite, and server-side pushdown via AggregationMergeEngine
+
+- Initiated a formal [DISCUSS thread](https://lists.apache.org/thread/z9dwyg81cs3bt7yssb4n3vg17o767r5s) on the Apache Fluss dev mailing list (March 2026) to gather community feedback  
+- Proposed and driving [FIP-37](https://cwiki.apache.org/confluence/display/FLUSS/FIP-37%3A+Native+RoaringBitmap+Integration+for+Apache+Fluss) for native RoaringBitmap integration in Fluss  
+- Full proposal: [Design Document](https://docs.google.com/document/d/1sDhfkmo-w-UTvo2n3rsY1lytSSryswfkI83cSdka8s0/edit?usp=sharing)
 
