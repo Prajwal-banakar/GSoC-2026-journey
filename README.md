@@ -17,9 +17,9 @@ Tracking my contributions to open source projects, primarily in the Apache Fluss
 ## Contribution Stats
 
 - **Projects:** Apache Fluss, Fluss Rust Client
-- **Total PRs:** 17
+- **Total PRs:** 18
 - **Merged PRs:** 11
-- **Open PRs:** 6
+- **Open PRs:** 7
 
 > 📦 Credited contributor in the official 
 > [Apache Fluss v0.9.0-incubating release](https://github.com/apache/fluss/releases/tag/v0.9.0-incubating) and [Fluss clients v0.1.0 release](https://fluss.apache.org/blog/fluss_rust_client_release/)
@@ -76,6 +76,7 @@ Contributions to the Fluss core project including documentation tooling, tutoria
 | [#2923](https://github.com/apache/fluss/pull/2923) | Merged | Documentation | Added C++ client documentation including installation, usage example, and integration with the client support matrix |
 | [#2864](https://github.com/apache/fluss/pull/2864) | Open | Flink / Testing | Fixed `OutOfMemoryError` during `TaskManager` startup in `FlinkMetricsITCase` by improving `MiniCluster` cleanup and reducing `NetworkBufferPool` memory pressure in integration tests |
 | [#2907](https://github.com/apache/fluss/pull/2907) | Open | Client / Bug Fix | Fixed deadlock in async `insertIfNotExists` lookups by deduplicating identical keys within the same `LookupBatch` and chaining duplicate futures to the first request |
+| [#3069](https://github.com/apache/fluss/pull/3069) | Open | Client / Validation | Added validation for critical client configs (`client.scanner.log.max-poll-records`, `client.connect-timeout`) to prevent invalid values (≤ 0), ensuring fail-fast behavior and aligning client-side validation with existing server-side patterns |
 
 
 
