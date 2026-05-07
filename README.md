@@ -10,7 +10,7 @@ Tracking my contributions to open source projects, primarily in the Apache Fluss
 - [Projects](#projects)
 - [Apache Fluss](#apache-fluss)
 - [Fluss Rust Client](#fluss-rust-client)
-- [Active Proposal](#active-proposal)
+- [Proposal](#proposal)
 
 ---
 
@@ -18,8 +18,8 @@ Tracking my contributions to open source projects, primarily in the Apache Fluss
 
 - **Projects:** Apache Fluss, Fluss Rust Client
 - **Total PRs:** 18
-- **Merged PRs:** 11
-- **Open PRs:** 7
+- **Merged PRs:** 12
+- **Open PRs:** 6
 
 > 📦 Credited contributor in the official 
 > [Apache Fluss v0.9.0-incubating release](https://github.com/apache/fluss/releases/tag/v0.9.0-incubating) and [Fluss clients v0.1.0 release](https://fluss.apache.org/blog/fluss_rust_client_release/)
@@ -93,7 +93,7 @@ Contributions to the Rust client improving API usability and integration with da
 | [#371](https://github.com/apache/fluss-rust/pull/371) | Merged | Client / Configuration | Made writer batch timeout configurable by introducing `writer_batch_timeout_ms`, wiring it across Rust, Python, and C++ bindings, and updating documentation |
 | [#417](https://github.com/apache/fluss-rust/pull/417) | Merged | Client / Configuration | Made LogScanner fetch parameters configurable (max/min bytes and max wait time), replacing hardcoded constants and wiring configuration across Rust, Python, and C++ bindings |
 | [#411](https://github.com/apache/fluss-rust/pull/411) | Merged | Client / Arrow Integration | Added `LookupResult::to_record_batch()` to expose lookup results as an Apache Arrow `RecordBatch`, enabling integration with Arrow-based engines like DataFusion |
-| [#449](https://github.com/apache/fluss-rust/pull/449) | Open | Client / Validation | Added validation for numeric configuration fields in `Config`, ensuring safe defaults and preventing invalid values during `FlussConnection` initialization |
+| [#449](https://github.com/apache/fluss-rust/pull/449) | Merged | Client / Validation | Added validation for numeric configuration fields in `Config`, ensuring safe defaults and preventing invalid values during `FlussConnection` initialization |
 
 ---
 
@@ -110,11 +110,12 @@ Contributions focused on enabling bitmap-based aggregation in Flink to support r
 
 ---
 
-## Active Proposal
+## Proposal
 
 ### Native BITMAP Integration & Stateless Pushdown Aggregation
 
 - Initiated a formal [DISCUSS thread](https://lists.apache.org/thread/z9dwyg81cs3bt7yssb4n3vg17o767r5s) on the Apache Fluss dev mailing list (March 2026) to gather community feedback  
 - Proposed and driving [FIP-37](https://cwiki.apache.org/confluence/display/FLUSS/FIP-37%3A+Native+RoaringBitmap+Integration+for+Apache+Fluss) for native RoaringBitmap integration in Fluss  
 - Full proposal: [Design Document](https://docs.google.com/document/d/1sDhfkmo-w-UTvo2n3rsY1lytSSryswfkI83cSdka8s0/edit?usp=sharing)
+- Accepted via : [VOTE thread](https://lists.apache.org/thread/zqnk1oomp6ty37vcx3nkr3l9blycdqzn)
 
