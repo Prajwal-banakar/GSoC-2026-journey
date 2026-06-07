@@ -1,0 +1,53 @@
+# GSoC 2026 Project Journal: RoaringBitmap Functions for Apache Fluss
+
+This file serves as the central hub for my Google Summer of Code 2026 project. Instead of a static document, this is a living journal to track my progress, challenges, and learnings as I implement native RoaringBitmap functions in Apache Fluss.
+
+## My Mission
+
+My goal is to make powerful bitmap-based analytics a seamless, out-of-the-box experience for Apache Fluss users. By implementing and registering a core set of RoaringBitmap functions directly into the Flink SQL layer, I will remove the need for custom UDFs and reduce the friction of performing high-performance, real-time analytics.
+
+## Core Objectives
+
+This project is broken down into two phases. I will be checking these boxes as I complete each function.
+
+### Phase 1 Deliverables:
+- [ ] `rb_build_agg` (In progress via PR #3398)
+- [ ] `rb_or_agg` (In progress via PR #3398)
+- [ ] `rb_and_agg` (In progress via PR #3398)
+- [ ] `rb_cardinality`
+- [ ] `rb_build`
+- [ ] `rb_contains`
+- [ ] `rb_to_array`
+- [ ] `rb_or`
+- [ ] `rb_and`
+
+### Phase 2 Deliverables:
+- [ ] `rb_xor_agg`
+- [ ] `rb_xor`
+- [ ] `rb_andnot`
+
+## Project Log
+
+### Week 2 (Coding Period: May 27 - June 2)
+*   **What I did:** Made significant progress on the core implementation for FIP-37.
+    *   **[MERGED]** My first PR, **[#3319](https://github.com/apache/fluss/pull/3319)**, was successfully merged! This PR lays the foundational infrastructure for all the new bitmap functions, including serialization utilities (`BitmapUtils`, `RoaringBitmapSerializer`) and a base class for aggregate functions.
+    *   **[IN REVIEW]** Submitted the next PR, **[#3398](https://github.com/apache/fluss/pull/3398)**, which implements the first three aggregate functions: `rb_build_agg`, `rb_or_agg`, and `rb_and_agg`. This PR also handles their registration in the `FlussCatalog`.
+*   **Challenges I faced:** The initial review for PR #3398 highlighted the need for a full end-to-end SQL ITCase to validate the Flink planner integration, which was more complex than simple unit tests. I've since added this to the PR.
+*   **What I learned:** I gained a much deeper understanding of Flink's type system, the importance of custom `TypeSerializer`s for complex types like RoaringBitmap, and how the Flink planner uses `FunctionHint` to handle UDFs. The review process was incredibly valuable for learning how to build robust, production-ready code.
+
+### Week 1 (Community Bonding: May 13 - May 26)
+*   **What I did:** Finalized project scope with mentors, studied the existing `AggregationMergeEngine` and `FlussCatalog` code, and set up my development environment.
+*   **Challenges I faced:** Understanding the distinction between server-side aggregation and the Flink SQL function layer.
+*   **What I learned:** The importance of FIP-37's scope being limited to the SQL function layer to avoid client-server compatibility issues.
+
+## Key Resources & Links
+- **Official Proposal:** [FIP-37: Native RoaringBitmap Integration for Apache Fluss](https://cwiki.apache.org/confluence/display/FLUSS/FIP-37%3A+Native+RoaringBitmap+Integration+for+Apache+Fluss)
+- **Community Discussion:** [Mailing List Thread](https://lists.apache.org/thread/z9dwyg81cs3bt7yssb4n3vg17o767r5s)
+- **GitHub Issue:** [FLUSS-3289](https://github.com/apache/fluss/issues/3289)
+- **GSoC Project Page:** [Official GSoC Project](https://summerofcode.withgoogle.com/programs/2026/projects/D5s5f4un)
+
+## Scope Boundaries (Future Work)
+To keep this project focused, the following items are explicitly out of scope and are being considered for future FIPs:
+- A native `BITMAP` data type in Flink.
+- Server-side pushdown for `RB_OR_AGG`.
+- A `rb64_` function family for 64-bit RoaringBitmaps.
