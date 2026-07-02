@@ -38,7 +38,7 @@ For details on my preparation and contributions leading up to this project, plea
 I've written a few blog posts about my journey and the technologies I'm working with. You can find them here:
 
 - [My Journey to Google Summer of Code 2026](https://prajwal-banakar.github.io/posts/my-gsoc-journey/)
-- [What is Open Source and Google Summer of Code?](https://prajwal-banakar.github.io/what-is-open-source-and-gsoc/)
+- [What is Open Source and Google Summer of Code?](https://prajwal-banakar.github.io/posts/what-is-open-source-and-gsoc/)
 - [What is Apache Fluss? A GSoC Story on Making Real-Time Analytics Simpler](https://prajwal-banakar.github.io/posts/what-is-apache-fluss/)
 
 You can also follow my journey on my [blog](https://prajwal-banakar.github.io).
